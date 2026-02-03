@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>高知おすすめご飯マップ</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body { font-family: sans-serif; text-align: center; margin: 0; }
+    .selector { margin: 20px; }
+    #map { height: 700px; width: 100%; }
+    .marker-label {
+      background-color: white;
+      border: 1px solid black;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>高知おすすめご飯マップ</h1>
+  <div class="selector">
+    <label for="genre">食べたい料理ジャンル:</label>
+    <select id="genre">
+      <option value="men">麺類</option>
+      <option value="washoku">和食</option>
+      <option value="chuka">中華</option>
+      <option value="western">洋食</option>
+      <option value="kochisan">高知の特産品</option>
+      <option value="sweets">スイーツ</option>
+    </select>
+    <button id="showBtn">表示</button>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
